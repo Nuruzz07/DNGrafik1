@@ -1,0 +1,1112 @@
+```html
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNGrafik - Creative Printing & Aesthetic Gift Wrapping</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans & Playwrite New Zealand Basic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playwrite+NZ:wght@100..400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dng-cream': '#FDFBF7',
+                        'dng-terracotta': '#C87A60',
+                        'dng-terracotta-dark': '#B5684F',
+                        'dng-rose': '#E2B4B0',
+                        'dng-sage-light': '#E8EFE9',
+                        'dng-sage-dark': '#3A4F41',
+                        'dng-charcoal': '#2C3E50',
+                        'dng-charcoal-light': '#3E576F',
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        handwritten: ['"Playwrite NZ"', 'cursive'],
+                    },
+                    borderRadius: {
+                        'soft': '14px',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Extra custom aesthetic styling */
+        .playwrite-accent {
+            font-family: 'Playwrite NZ', cursive;
+            font-weight: 300;
+        }
+        .grainy-bg {
+            background-color: #FDFBF7;
+            background-image: radial-gradient(rgba(44, 62, 80, 0.03) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        /* Custom smooth hover effects */
+        .aesthetic-shadow {
+            box-shadow: 0 10px 30px -10px rgba(200, 122, 96, 0.15);
+        }
+        .aesthetic-shadow-lg {
+            box-shadow: 0 20px 40px -15px rgba(44, 62, 80, 0.1);
+        }
+        /* Cinematic filter on images */
+        .cinematic-img {
+            filter: brightness(0.96) contrast(1.02) saturate(0.95);
+            transition: all 0.5s ease;
+        }
+        .cinematic-img:hover {
+            filter: brightness(1) contrast(1.05) saturate(1);
+        }
+    </style>
+</head>
+<body class="grainy-bg text-dng-charcoal font-sans antialiased overflow-x-hidden">
+
+    <nav class="sticky top-0 z-50 bg-dng-cream/90 backdrop-blur-md border-b border-dng-terracotta/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex flex-col">
+                <span class="playwrite-accent text-2xl font-bold tracking-tight text-dng-terracotta">DNGrafik</span>
+                <span class="text-[9px] uppercase tracking-[0.2em] -mt-1 font-semibold text-dng-sage-dark">Creative Print Partner</span>
+            </a>
+
+            <!-- Desktop Menu Links -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-dng-charcoal-light">
+                <a href="#katalog" class="hover:text-dng-terracotta transition-colors duration-200">Katalog Produk</a>
+                <a href="#alur" class="hover:text-dng-terracotta transition-colors duration-200">Cara Request</a>
+                <a href="#galeri" class="hover:text-dng-terracotta transition-colors duration-200">Inspirasi Galeri</a>
+                <a href="#kustomisasi" class="hover:text-dng-terracotta transition-colors duration-200">Virtual Request</a>
+            </div>
+
+            <!-- Header CTA Button -->
+            <div class="hidden md:block">
+                <a href="#kustomisasi" class="px-6 py-3 bg-dng-charcoal hover:bg-dng-charcoal-light text-white text-sm font-semibold rounded-soft shadow-md hover:shadow-lg transition-all duration-200">
+                    Pesan Sekarang
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-dng-charcoal hover:text-dng-terracotta p-2 focus:outline-none" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-drawer" class="hidden md:hidden bg-dng-cream border-b border-dng-terracotta/10 transition-all duration-300">
+            <div class="px-6 py-4 flex flex-col space-y-4 text-sm font-semibold text-dng-charcoal-light pb-6">
+                <a href="#katalog" class="mobile-link hover:text-dng-terracotta py-2 border-b border-dng-terracotta/5">Katalog Produk</a>
+                <a href="#alur" class="mobile-link hover:text-dng-terracotta py-2 border-b border-dng-terracotta/5">Cara Request</a>
+                <a href="#galeri" class="mobile-link hover:text-dng-terracotta py-2 border-b border-dng-terracotta/5">Inspirasi Galeri</a>
+                <a href="#kustomisasi" class="mobile-link hover:text-dng-terracotta py-2 pb-3 border-b border-dng-terracotta/5">Virtual Request</a>
+                <a href="#kustomisasi" class="mobile-link py-3 bg-dng-charcoal text-white text-center rounded-soft shadow-md font-bold">
+                    Pesan Sekarang <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative overflow-hidden pt-8 pb-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Hero Description Text -->
+            <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center space-x-2 px-3 py-1.5 bg-dng-sage-light text-dng-sage-dark rounded-full text-xs font-semibold tracking-wide">
+                    <span class="flex h-2 w-2 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-dng-terracotta opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-dng-terracotta"></span>
+                    </span>
+                    <span>#1 Aesthetic Custom Printing B2C</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-dng-charcoal">
+                    Cetak Ide Kreatifmu dengan Sentuhan 
+                    <span class="playwrite-accent text-dng-terracotta block mt-2 font-normal lowercase py-2">lebih estetik.</span>
+                </h1>
+                
+                <p class="text-base md:text-lg text-dng-charcoal-light/90 max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                    DNGrafik adalah partner kreatif setiamu. Abadikan kenangan terindah, cetak kalender kustom minimalis, hingga bungkus hadiah kasual-estetik yang sepenuhnya disesuaikan dengan imajinasimu.
+                </p>
+
+                <!-- Hero CTAs -->
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                    <a href="#kustomisasi" class="w-full sm:w-auto px-8 py-4 bg-dng-charcoal hover:bg-dng-charcoal-light text-white font-semibold rounded-soft shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 text-center min-h-[48px] flex items-center justify-center">
+                        Mulai Custom Kado
+                    </a>
+                    <a href="#katalog" class="w-full sm:w-auto px-8 py-4 border-2 border-dng-terracotta/30 text-dng-charcoal hover:text-dng-terracotta hover:border-dng-terracotta/70 font-semibold rounded-soft transition-all duration-300 text-center min-h-[48px] flex items-center justify-center">
+                        Eksplor Layanan
+                    </a>
+                </div>
+
+                <!-- Small Trust Indicator -->
+                <div class="pt-6 grid grid-cols-3 gap-4 border-t border-dng-terracotta/10 max-w-md mx-auto lg:mx-0">
+                    <div>
+                        <p class="text-xl md:text-2xl font-bold text-dng-terracotta">100%</p>
+                        <p class="text-xs text-dng-charcoal-light">By Request</p>
+                    </div>
+                    <div>
+                        <p class="text-xl md:text-2xl font-bold text-dng-terracotta">4.9★</p>
+                        <p class="text-xs text-dng-charcoal-light">Rating Kepuasan</p>
+                    </div>
+                    <div>
+                        <p class="text-xl md:text-2xl font-bold text-dng-terracotta">FAST</p>
+                        <p class="text-xs text-dng-charcoal-light">Selesai 1-2 Hari</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Interactive Collage (Right Section) -->
+            <div class="lg:col-span-6 relative mt-6 lg:mt-0 flex justify-center">
+                <div class="relative w-full max-w-md md:max-w-lg aspect-square">
+                    <!-- Elegant Background Decorative Shape -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-dng-rose/30 to-dng-sage-light/50 rounded-full blur-2xl -z-10 scale-95"></div>
+
+                    <!-- Polaroid Photo (Top Left) -->
+                    <div class="absolute top-[5%] left-[5%] w-[48%] bg-white p-3 shadow-lg rounded-md rotate-[-6deg] hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer border border-neutral-100 group">
+                        <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&q=80&w=400" alt="Cetak Foto Polaroid Estetik" class="w-full h-40 object-cover rounded-sm cinematic-img" onerror="this.onerror=null; this.src='https://placehold.co/400x400/FDFBF7/2C3E50?text=Cetak+Foto+Aesthetic'">
+                        <div class="mt-3 text-center">
+                            <p class="playwrite-accent text-xs text-dng-terracotta font-normal">vintage vibes</p>
+                        </div>
+                    </div>
+
+                    <!-- Custom Calendar (Top Right) -->
+                    <div class="absolute top-[8%] right-[5%] w-[42%] bg-white p-3 shadow-md rounded-soft rotate-[4deg] hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer border border-neutral-100">
+                        <div class="bg-dng-sage-light/40 rounded-sm p-2 flex flex-col justify-between h-32 text-center">
+                            <span class="text-[9px] uppercase tracking-widest font-bold text-dng-sage-dark">Desember 2026</span>
+                            <div class="grid grid-cols-7 gap-1 text-[8px] mt-2 font-mono">
+                                <span class="text-dng-terracotta">S</span><span>S</span><span>R</span><span>K</span><span>J</span><span>S</span><span>M</span>
+                                <span class="text-neutral-300">28</span><span class="text-neutral-300">29</span><span class="text-neutral-300">30</span><span>1</span><span>2</span><span>3</span><span class="font-bold text-dng-terracotta">4</span>
+                            </div>
+                            <span class="text-[10px] font-handwritten text-dng-terracotta">My Planner</span>
+                        </div>
+                        <p class="text-[11px] font-bold text-dng-charcoal text-center mt-3">Minimalist Wooden Desk Calendar</p>
+                    </div>
+
+                    <!-- Aesthetic Wrapped Gift Box (Center Bottom) -->
+                    <div class="absolute bottom-[5%] left-[18%] w-[64%] bg-white p-4 shadow-xl rounded-2xl rotate-[-2deg] hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer border border-neutral-100 group">
+                        <div class="relative overflow-hidden rounded-xl">
+                            <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&q=80&w=500" alt="Bungkus Kado Estetik" class="w-full h-48 object-cover cinematic-img" onerror="this.onerror=null; this.src='https://placehold.co/500x380/FDFBF7/2C3E50?text=Bungkus+Kado+Custom'">
+                            <span class="absolute top-2 right-2 px-2.5 py-1 bg-dng-charcoal text-white text-[9px] tracking-widest uppercase font-bold rounded-full">Kado Impian</span>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div>
+                                <h3 class="text-sm font-bold text-dng-charcoal">Wrapping Sage & Twine</h3>
+                                <p class="text-[11px] text-dng-charcoal-light">Rustic jute rope + Pressed Flower accent</p>
+                            </div>
+                            <div class="h-8 w-8 rounded-full bg-dng-rose/30 flex items-center justify-center text-dng-terracotta group-hover:bg-dng-terracotta group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-gift text-sm"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <section id="katalog" class="py-16 bg-white/60 border-t border-b border-dng-terracotta/5 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <span class="playwrite-accent text-dng-terracotta text-lg lowercase block">apa yang bisa kami buatkan?</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-dng-charcoal">Katalog Produk Kreatif & Estetik</h2>
+                <div class="w-16 h-1 bg-dng-terracotta mx-auto rounded-full"></div>
+                <p class="text-sm md:text-base text-dng-charcoal-light leading-relaxed">
+                    Setiap cetakan dirancang dengan sepenuh hati, menggunakan kertas premium, tinta terbaik, serta sentuhan aksesori pelengkap yang kasual.
+                </p>
+            </div>
+
+            <!-- 3 Column Catalog Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Product 1: Cetak Foto -->
+                <div class="bg-dng-cream rounded-2xl border border-dng-terracotta/10 p-5 flex flex-col justify-between shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group">
+                    <div class="space-y-4">
+                        <div class="relative overflow-hidden rounded-xl aspect-[4/3]">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400" alt="Cetak Foto Estetik" class="w-full h-full object-cover cinematic-img group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/FDFBF7/2C3E50?text=Cetak+Foto'">
+                            <span class="absolute top-3 left-3 bg-dng-charcoal/85 backdrop-blur-sm text-white px-3 py-1 text-xs rounded-full font-medium">Mulai Rp 10k</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dng-charcoal">Cetak Foto Estetik & Polaroid</h3>
+                        <p class="text-sm text-dng-charcoal-light leading-relaxed">
+                            Cetak foto digitalmu menjadi versi fisik bergaya Polaroid, Strip Instax, atau Cetak Kolase Bingkai Kayu dengan kertas bertekstur premium anti pudar.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-6 pt-4 border-t border-dng-terracotta/10 flex flex-col gap-3">
+                        <button onclick="openProductDetail('foto')" class="w-full py-2.5 bg-dng-sage-light hover:bg-dng-rose/30 text-dng-sage-dark font-semibold text-xs rounded-soft transition-colors min-h-[44px]">
+                            Lihat Opsi Kustomisasi
+                        </button>
+                        <a href="#kustomisasi" onclick="selectProductField('foto')" class="w-full py-2.5 bg-dng-charcoal hover:bg-dng-charcoal-light text-white text-center font-semibold text-xs rounded-soft transition-colors min-h-[44px] flex items-center justify-center">
+                            Desain Sekarang <i class="fa-solid fa-arrow-right ml-1.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 2: Kalender Kustom -->
+                <div class="bg-dng-cream rounded-2xl border border-dng-terracotta/10 p-5 flex flex-col justify-between shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group">
+                    <div class="space-y-4">
+                        <div class="relative overflow-hidden rounded-xl aspect-[4/3]">
+                            <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&q=80&w=400" alt="Kalender Kustom" class="w-full h-full object-cover cinematic-img group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/FDFBF7/2C3E50?text=Kalender+Aesthetic'">
+                            <span class="absolute top-3 left-3 bg-dng-charcoal/85 backdrop-blur-sm text-white px-3 py-1 text-xs rounded-full font-medium">Mulai Rp 35k</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dng-charcoal">Kalender Kustom Minimalis</h3>
+                        <p class="text-sm text-dng-charcoal-light leading-relaxed">
+                            Kalender meja modern dengan pilihan dudukan kayu estetik. Bisa dicustom menggunakan foto pribadi, kutipan motivasi, atau penanda tanggal spesial Anda.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-6 pt-4 border-t border-dng-terracotta/10 flex flex-col gap-3">
+                        <button onclick="openProductDetail('kalender')" class="w-full py-2.5 bg-dng-sage-light hover:bg-dng-rose/30 text-dng-sage-dark font-semibold text-xs rounded-soft transition-colors min-h-[44px]">
+                            Lihat Opsi Kustomisasi
+                        </button>
+                        <a href="#kustomisasi" onclick="selectProductField('kalender')" class="w-full py-2.5 bg-dng-charcoal hover:bg-dng-charcoal-light text-white text-center font-semibold text-xs rounded-soft transition-colors min-h-[44px] flex items-center justify-center">
+                            Desain Sekarang <i class="fa-solid fa-arrow-right ml-1.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 3: Bungkus Kado -->
+                <div class="bg-dng-cream rounded-2xl border border-dng-terracotta/10 p-5 flex flex-col justify-between shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group">
+                    <div class="space-y-4">
+                        <div class="relative overflow-hidden rounded-xl aspect-[4/3]">
+                            <img src="https://images.unsplash.com/photo-1607344645866-009c320c5ab8?auto=format&fit=crop&q=80&w=400" alt="Bungkus Hadiah Estetik" class="w-full h-full object-cover cinematic-img group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/FDFBF7/2C3E50?text=Bungkus+Kado'">
+                            <span class="absolute top-3 left-3 bg-dng-charcoal/85 backdrop-blur-sm text-white px-3 py-1 text-xs rounded-full font-medium">Mulai Rp 25k</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dng-charcoal">Bungkus Hadiah Kasual-Estetik</h3>
+                        <p class="text-sm text-dng-charcoal-light leading-relaxed">
+                            Sempurnakan hadiahmu dengan pembungkus eksklusif kertas kraft/pastel, dipadukan dengan tali rami rustic, wax seal vintage, bunga kering asli, dan gift card tulisan tangan.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-6 pt-4 border-t border-dng-terracotta/10 flex flex-col gap-3">
+                        <button onclick="openProductDetail('kado')" class="w-full py-2.5 bg-dng-sage-light hover:bg-dng-rose/30 text-dng-sage-dark font-semibold text-xs rounded-soft transition-colors min-h-[44px]">
+                            Lihat Opsi Kustomisasi
+                        </button>
+                        <a href="#kustomisasi" onclick="selectProductField('kado')" class="w-full py-2.5 bg-dng-charcoal hover:bg-dng-charcoal-light text-white text-center font-semibold text-xs rounded-soft transition-colors min-h-[44px] flex items-center justify-center">
+                            Desain Sekarang <i class="fa-solid fa-arrow-right ml-1.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Modal for Product Options Detail -->
+    <div id="product-detail-modal" class="hidden fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-dng-cream max-w-lg w-full rounded-2xl p-6 relative border border-dng-terracotta/20 animate-fade-in shadow-2xl">
+            <button onclick="closeProductDetail()" class="absolute top-4 right-4 text-dng-charcoal hover:text-dng-terracotta p-2">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div id="modal-content" class="space-y-4">
+                <!-- Modal content will load dynamically based on clicked item -->
+            </div>
+        </div>
+    </div>
+
+    <section id="alur" class="py-20 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <span class="playwrite-accent text-dng-terracotta text-lg lowercase block">bagaimana alurnya?</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-dng-charcoal">Sederhana & Sesuai Impianmu</h2>
+                <div class="w-16 h-1 bg-dng-terracotta mx-auto rounded-full"></div>
+                <p class="text-sm md:text-base text-dng-charcoal-light">
+                    Kami hadir sebagai *creative partner*, proses kustomisasi produk B2C sangatlah mudah dilakukan lewat langkah kasual berikut.
+                </p>
+            </div>
+
+            <!-- Flow Timeline Grid -->
+            <div class="relative">
+                <!-- Center Connecting Line (Desktop) -->
+                <div class="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-dashed bg-gradient-to-r from-dng-terracotta/10 via-dng-terracotta/40 to-dng-terracotta/10 -translate-y-1/2"></div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 relative z-10">
+                    
+                    <!-- Step 1 -->
+                    <div class="bg-dng-cream border border-dng-terracotta/10 p-8 rounded-2xl flex flex-col items-center text-center shadow-sm relative group hover:border-dng-rose transition-all">
+                        <div class="h-16 w-16 rounded-full bg-dng-rose/20 text-dng-terracotta flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-dng-terracotta group-hover:text-white transition-all duration-300">
+                            1
+                        </div>
+                        <h4 class="text-lg font-bold text-dng-charcoal mb-2">Request dari Kamu</h4>
+                        <p class="text-sm text-dng-charcoal-light leading-relaxed">
+                            Pilih produk di landing page, isi form preferensi warna, tulisan kustom, atau kado impianmu dengan santai.
+                        </p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="bg-dng-cream border border-dng-terracotta/10 p-8 rounded-2xl flex flex-col items-center text-center shadow-sm relative group hover:border-dng-rose transition-all">
+                        <div class="h-16 w-16 rounded-full bg-dng-sage-light text-dng-sage-dark flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-dng-sage-dark group-hover:text-white transition-all duration-300">
+                            2
+                        </div>
+                        <h4 class="text-lg font-bold text-dng-charcoal mb-2">Desain DNGrafik</h4>
+                        <p class="text-sm text-dng-charcoal-light leading-relaxed">
+                            Kami melakukan penataan layout foto, mencocokkan palette, dan merancang kado secara personal sesuai catatan request-mu.
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="bg-dng-cream border border-dng-terracotta/10 p-8 rounded-2xl flex flex-col items-center text-center shadow-sm relative group hover:border-dng-rose transition-all">
+                        <div class="h-16 w-16 rounded-full bg-dng-rose/20 text-dng-terracotta flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-dng-terracotta group-hover:text-white transition-all duration-300">
+                            3
+                        </div>
+                        <h4 class="text-lg font-bold text-dng-charcoal mb-2">Produk Jadi & Dikirim</h4>
+                        <p class="text-sm text-dng-charcoal-light leading-relaxed">
+                            Setelah disetujui, hasil cetakan/kado dipacking aman nan estetik lalu meluncur ke alamatmu atau langsung ke sang penerima kado.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="kustomisasi" class="py-20 bg-gradient-to-b from-white/40 to-dng-cream border-t border-dng-terracotta/10 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Left Details Form -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="playwrite-accent text-dng-terracotta text-lg lowercase block">ayo coba kustomisasi virtual!</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-dng-charcoal leading-tight">Simulator Preferensi & Custom Request</h2>
+                    <p class="text-sm md:text-base text-dng-charcoal-light">
+                        Pilih jenis layanan, warna tema, aksen tambahan, serta ceritakan imajinasimu secara kasual. Hasil simulasi ini akan langsung dirangkum menjadi draf pesan WhatsApp yang rapi dan siap dikonsultasikan!
+                    </p>
+
+                    <!-- Interactive Form Container -->
+                    <form id="virtualRequestForm" class="space-y-6 bg-white p-6 md:p-8 rounded-2xl border border-dng-terracotta/10 shadow-md">
+                        
+                        <!-- Product Selection Dropdown -->
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider font-bold text-dng-charcoal-light mb-2">Pilih Layanan Utama</label>
+                            <select id="requestProduct" onchange="updateVirtualMockup()" class="w-full bg-dng-cream border border-dng-terracotta/20 text-dng-charcoal text-sm font-semibold rounded-soft p-3 focus:ring-2 focus:ring-dng-terracotta focus:border-dng-terracotta outline-none min-h-[48px]">
+                                <option value="kado">Bungkus Hadiah Kasual-Estetik</option>
+                                <option value="foto">Cetak Foto Estetik & Polaroid</option>
+                                <option value="kalender">Kalender Kustom Minimalis</option>
+                            </select>
+                        </div>
+
+                        <!-- Dynamic Wrap Color Theme (Interactive Radio Beads) -->
+                        <div id="wrapperThemeSelection">
+                            <label class="block text-xs uppercase tracking-wider font-bold text-dng-charcoal-light mb-2">Pilih Warna Dasar / Tema Kertas</label>
+                            <div class="flex flex-wrap gap-3">
+                                <label class="cursor-pointer relative flex items-center justify-center">
+                                    <input type="radio" name="colorTheme" value="Sage Green" checked onchange="updateVirtualMockup()" class="peer sr-only">
+                                    <span class="px-4 py-2 bg-dng-cream border border-dng-terracotta/20 peer-checked:border-dng-terracotta peer-checked:bg-dng-sage-light text-xs font-semibold rounded-full text-dng-charcoal transition-all">Sage Green Pastel</span>
+                                </label>
+                                <label class="cursor-pointer relative flex items-center justify-center">
+                                    <input type="radio" name="colorTheme" value="Dusty Rose" onchange="updateVirtualMockup()" class="peer sr-only">
+                                    <span class="px-4 py-2 bg-dng-cream border border-dng-terracotta/20 peer-checked:border-dng-terracotta peer-checked:bg-dng-rose/30 text-xs font-semibold rounded-full text-dng-charcoal transition-all">Dusty Rose</span>
+                                </label>
+                                <label class="cursor-pointer relative flex items-center justify-center">
+                                    <input type="radio" name="colorTheme" value="Aesthetic Kraft (Cokelat Vintage)" onchange="updateVirtualMockup()" class="peer sr-only">
+                                    <span class="px-4 py-2 bg-dng-cream border border-dng-terracotta/20 peer-checked:border-dng-terracotta peer-checked:bg-[#EEDBC5]/30 text-xs font-semibold rounded-full text-dng-charcoal transition-all">Vintage Kraft</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Dynamic Accessories Checklist -->
+                        <div id="accessoriesSelection">
+                            <label class="block text-xs uppercase tracking-wider font-bold text-dng-charcoal-light mb-2">Aksen Tambahan (Bisa Pilih > 1)</label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <label class="flex items-center space-x-2 cursor-pointer bg-dng-cream border border-dng-terracotta/10 p-3 rounded-soft text-xs font-semibold text-dng-charcoal hover:border-dng-terracotta">
+                                    <input type="checkbox" name="acc" value="Tali Rami Rustic" checked onchange="updateVirtualMockup()" class="rounded text-dng-terracotta focus:ring-dng-terracotta h-4 w-4">
+                                    <span>Tali Rami Rustic</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer bg-dng-cream border border-dng-terracotta/10 p-3 rounded-soft text-xs font-semibold text-dng-charcoal hover:border-dng-terracotta">
+                                    <input type="checkbox" name="acc" value="Bunga Kering Asli (Pressed Lavender)" checked onchange="updateVirtualMockup()" class="rounded text-dng-terracotta focus:ring-dng-terracotta h-4 w-4">
+                                    <span>Bunga Kering Lavender</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer bg-dng-cream border border-dng-terracotta/10 p-3 rounded-soft text-xs font-semibold text-dng-charcoal hover:border-dng-terracotta">
+                                    <input type="checkbox" name="acc" value="Vintage Wax Seal Stamp" onchange="updateVirtualMockup()" class="rounded text-dng-terracotta focus:ring-dng-terracotta h-4 w-4">
+                                    <span>Vintage Wax Stamp</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer bg-dng-cream border border-dng-terracotta/10 p-3 rounded-soft text-xs font-semibold text-dng-charcoal hover:border-dng-terracotta">
+                                    <input type="checkbox" name="acc" value="Handwritten Gift Card" checked onchange="updateVirtualMockup()" class="rounded text-dng-terracotta focus:ring-dng-terracotta h-4 w-4">
+                                    <span>Gift Card Tangan</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Caption / Text Note -->
+                        <div>
+                            <label id="noteLabel" class="block text-xs uppercase tracking-wider font-bold text-dng-charcoal-light mb-2">Ceritakan Desain/Kado Impianmu</label>
+                            <textarea id="requestNotes" oninput="updateVirtualMockup()" rows="3" placeholder="Contoh: Kado ini untuk ulang tahun sahabatku, tolong berikan nuansa tulisan yang ceria dan pastel kalem ya..." class="w-full bg-dng-cream border border-dng-terracotta/20 text-dng-charcoal text-sm rounded-soft p-3 focus:ring-2 focus:ring-dng-terracotta focus:border-dng-terracotta outline-none"></textarea>
+                        </div>
+
+                        <!-- Interactive Form Actions -->
+                        <div class="pt-4">
+                            <button type="button" onclick="sendToWhatsApp()" class="w-full py-4 bg-[#25D366] hover:bg-[#128C7E] text-white font-bold rounded-soft shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2 text-sm min-h-[48px]">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                <span>Konsultasikan via WhatsApp</span>
+                            </button>
+                            <p class="text-center text-[11px] text-dng-charcoal-light mt-2">Draf pesan kustomisasi akan otomatis disiapkan untuk CS DNGrafik.</p>
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- Right Live Preview Mockup -->
+                <div class="lg:col-span-6 flex flex-col items-center justify-center relative">
+                    <div class="w-full max-w-sm sticky top-28 bg-white p-6 rounded-2xl border border-dng-terracotta/10 shadow-xl space-y-4">
+                        <div class="flex items-center justify-between border-b border-dng-terracotta/10 pb-3">
+                            <span class="text-xs uppercase font-extrabold tracking-widest text-dng-charcoal-light flex items-center">
+                                <span class="h-2 w-2 rounded-full bg-emerald-500 mr-2 animate-pulse"></span> Live Mockup Preview
+                            </span>
+                            <span class="text-[10px] bg-dng-terracotta/10 text-dng-terracotta font-bold px-2.5 py-1 rounded-full uppercase" id="previewBadge">Kado</span>
+                        </div>
+
+                        <!-- Mockup Screen Visual representation -->
+                        <div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden flex items-center justify-center transition-all duration-300" id="previewWrapper">
+                            
+                            <!-- Custom Gift Wrap Virtual Component -->
+                            <div id="mockupGiftWrap" class="w-48 h-32 bg-dng-sage-light rounded-lg shadow-lg border border-neutral-200/40 relative flex items-center justify-center transition-all duration-300">
+                                <!-- Ribbon -->
+                                <div id="mockupRibbonHorizontal" class="absolute left-0 right-0 h-4 bg-yellow-900/40 top-[40%] flex items-center justify-center"></div>
+                                <div id="mockupRibbonVertical" class="absolute top-0 bottom-0 w-4 bg-yellow-900/40 left-[45%] flex items-center justify-center"></div>
+                                <!-- Wax stamp visual -->
+                                <div id="mockupWax" class="absolute h-6 w-6 rounded-full bg-red-800/80 shadow-md top-[35%] left-[42%] hidden flex items-center justify-center">
+                                    <span class="text-[8px] text-yellow-300">★</span>
+                                </div>
+                                <!-- Pressed flower visual -->
+                                <div id="mockupFlower" class="absolute top-[15%] left-[55%] flex flex-col items-center opacity-80 rotate-[15deg]">
+                                    <div class="w-1 h-12 bg-emerald-800/60 rounded"></div>
+                                    <div class="w-4 h-4 rounded-full bg-purple-400/80 -mt-12"></div>
+                                </div>
+                                <!-- Gift card tag -->
+                                <div id="mockupTag" class="absolute bottom-3 right-3 bg-white border border-neutral-300 p-1.5 rounded shadow text-[7px] max-w-[80px] font-handwritten text-[6px] tracking-tighter leading-none rotate-[-5deg]">
+                                    To: Sahabatku
+                                </div>
+                            </div>
+
+                            <!-- Custom Polaroid Photo Virtual Component -->
+                            <div id="mockupPolaroid" class="hidden w-36 bg-white p-3 shadow-xl rounded-md border border-neutral-100 rotate-[-2deg] transition-all duration-300">
+                                <div class="w-full aspect-square bg-neutral-100 rounded-sm relative overflow-hidden flex items-center justify-center">
+                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=300" alt="Preview Cetak" class="w-full h-full object-cover">
+                                    <div id="polaroidFilter" class="absolute inset-0 bg-amber-800/10 mix-blend-color-burn"></div>
+                                </div>
+                                <div id="mockupPolaroidCaption" class="mt-2 text-center text-[10px] font-handwritten text-dng-terracotta leading-tight">
+                                    Sweet Memories
+                                </div>
+                            </div>
+
+                            <!-- Custom Desk Calendar Virtual Component -->
+                            <div id="mockupCalendar" class="hidden w-40 bg-white p-3 shadow-xl rounded-md border border-neutral-100 transition-all duration-300 flex flex-col justify-between">
+                                <div class="bg-neutral-50 rounded p-2 text-center">
+                                    <div class="text-[8px] uppercase tracking-widest font-extrabold text-dng-terracotta">September 2026</div>
+                                    <div class="grid grid-cols-7 gap-1 text-[6px] mt-1 font-mono">
+                                        <span>S</span><span>S</span><span>R</span><span>K</span><span>J</span><span>S</span><span>M</span>
+                                        <span class="text-neutral-300">1</span><span>2</span><span>3</span><span>4</span><span>5</span><span class="text-dng-terracotta">6</span><span>7</span>
+                                    </div>
+                                </div>
+                                <div class="h-4 bg-amber-800 rounded-b mt-2 flex items-center justify-center">
+                                    <span class="text-[5px] uppercase font-bold text-white tracking-widest">Premium Wooden base</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Summary card detail display -->
+                        <div class="bg-dng-cream rounded-soft p-4 border border-dng-terracotta/10 space-y-2">
+                            <h5 class="text-[11px] uppercase font-bold text-dng-charcoal-light">Spesifikasi Pilihan:</h5>
+                            <div id="virtualSummaryList" class="text-xs text-dng-charcoal space-y-1 font-medium">
+                                <!-- Generated list will inject here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="galeri" class="py-20 bg-white scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+                <span class="playwrite-accent text-dng-terracotta text-lg lowercase block">sudut inspirasi kami</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-dng-charcoal">Aesthetic Portfolio Gallery</h2>
+                <div class="w-16 h-1 bg-dng-terracotta mx-auto rounded-full"></div>
+                <p class="text-sm md:text-base text-dng-charcoal-light">
+                    Karya nyata dari imajinasi para pelanggan yang telah diwujudkan oleh tim ahli kreasi DNGrafik.
+                </p>
+            </div>
+
+            <!-- Portfolio Filter Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+                <button onclick="filterGallery('semua')" class="gallery-filter-btn px-5 py-2.5 rounded-full text-xs font-bold transition-all duration-200 bg-dng-charcoal text-white shadow-md" data-category="semua">
+                    Semua Karya
+                </button>
+                <button onclick="filterGallery('kado')" class="gallery-filter-btn px-5 py-2.5 rounded-full text-xs font-bold transition-all duration-200 bg-dng-cream text-dng-charcoal hover:bg-dng-rose/30" data-category="kado">
+                    Bungkus Hadiah
+                </button>
+                <button onclick="filterGallery('foto')" class="gallery-filter-btn px-5 py-2.5 rounded-full text-xs font-bold transition-all duration-200 bg-dng-cream text-dng-charcoal hover:bg-dng-rose/30" data-category="foto">
+                    Cetak Foto
+                </button>
+                <button onclick="filterGallery('kalender')" class="gallery-filter-btn px-5 py-2.5 rounded-full text-xs font-bold transition-all duration-200 bg-dng-cream text-dng-charcoal hover:bg-dng-rose/30" data-category="kalender">
+                    Kalender Kustom
+                </button>
+            </div>
+
+            <!-- Portfolio Grid Items -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="portfolioGrid">
+                
+                <!-- Item 1 (Kado) -->
+                <div class="gallery-item cursor-pointer bg-dng-cream rounded-2xl p-3 border border-dng-terracotta/5 shadow-sm hover:shadow-lg transition-all" data-item-category="kado">
+                    <div class="relative overflow-hidden rounded-xl aspect-square mb-3">
+                        <img src="https://images.unsplash.com/photo-1607344645866-009c320c5ab8?auto=format&fit=crop&q=80&w=400" alt="Bungkus Kado Sage Green" class="w-full h-full object-cover cinematic-img">
+                    </div>
+                    <p class="text-[10px] uppercase font-extrabold text-dng-terracotta tracking-wider">Bungkus Kado</p>
+                    <h5 class="text-sm font-bold text-dng-charcoal mt-0.5">Sage Green & Twine Wrap</h5>
+                </div>
+
+                <!-- Item 2 (Foto) -->
+                <div class="gallery-item cursor-pointer bg-dng-cream rounded-2xl p-3 border border-dng-terracotta/5 shadow-sm hover:shadow-lg transition-all" data-item-category="foto">
+                    <div class="relative overflow-hidden rounded-xl aspect-square mb-3">
+                        <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&q=80&w=400" alt="Polaroid Wall Collection" class="w-full h-full object-cover cinematic-img">
+                    </div>
+                    <p class="text-[10px] uppercase font-extrabold text-dng-terracotta tracking-wider">Cetak Foto</p>
+                    <h5 class="text-sm font-bold text-dng-charcoal mt-0.5">Polaroid Retro Vintage Print</h5>
+                </div>
+
+                <!-- Item 3 (Kalender) -->
+                <div class="gallery-item cursor-pointer bg-dng-cream rounded-2xl p-3 border border-dng-terracotta/5 shadow-sm hover:shadow-lg transition-all" data-item-category="kalender">
+                    <div class="relative overflow-hidden rounded-xl aspect-square mb-3">
+                        <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&q=80&w=400" alt="Kalender Kayu Minimalis" class="w-full h-full object-cover cinematic-img">
+                    </div>
+                    <p class="text-[10px] uppercase font-extrabold text-dng-terracotta tracking-wider">Kalender</p>
+                    <h5 class="text-sm font-bold text-dng-charcoal mt-0.5">Wood Stand Desk Calendar</h5>
+                </div>
+
+                <!-- Item 4 (Kado) -->
+                <div class="gallery-item cursor-pointer bg-dng-cream rounded-2xl p-3 border border-dng-terracotta/5 shadow-sm hover:shadow-lg transition-all" data-item-category="kado">
+                    <div class="relative overflow-hidden rounded-xl aspect-square mb-3">
+                        <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&q=80&w=400" alt="Dusty Rose Gift Box" class="w-full h-full object-cover cinematic-img">
+                    </div>
+                    <p class="text-[10px] uppercase font-extrabold text-dng-terracotta tracking-wider">Bungkus Kado</p>
+                    <h5 class="text-sm font-bold text-dng-charcoal mt-0.5">Rose Ribbon Sweet Gift</h5>
+                </div>
+
+                <!-- Item 5 (Foto) -->
+                <div class="gallery-item cursor-pointer bg-dng-cream rounded-2xl p-3 border border-dng-terracotta/5 shadow-sm hover:shadow-lg transition-all" data-item-category="foto">
+                    <div class="relative overflow-hidden rounded-xl aspect-square mb-3">
+                        <img src="https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?auto=format&fit=crop&q=80&w=400" alt="Photo Frame Desk" class="w-full h-full object-cover cinematic-img">
+                    </div>
+                    <p class="text-[10px] uppercase font-extrabold text-dng-terracotta tracking-wider">Cetak Foto</p>
+                    <h5 class="text-sm font-bold text-dng-charcoal mt-0.5">Minimalist Photo Frame Stand</h5>
+                </div>
+
+                <!-- Item 6 (Kado) -->
+                <div class="gallery-item cursor-pointer bg-dng-cream rounded-2xl p-3 border border-dng-terracotta/5 shadow-sm hover:shadow-lg transition-all" data-item-category="kado">
+                    <div class="relative overflow-hidden rounded-xl aspect-square mb-3">
+                        <img src="https://images.unsplash.com/photo-1608686207856-001b95cf60ca?auto=format&fit=crop&q=80&w=400" alt="Vintage Stamp Kraft Wrap" class="w-full h-full object-cover cinematic-img">
+                    </div>
+                    <p class="text-[10px] uppercase font-extrabold text-dng-terracotta tracking-wider">Bungkus Kado</p>
+                    <h5 class="text-sm font-bold text-dng-charcoal mt-0.5">Vintage Wax & Kraft Wrap</h5>
+                </div>
+
+                <!-- Item 7 (Kalender) -->
+                <div class="gallery-item cursor-pointer bg-dng-cream rounded-2xl p-3 border border-dng-terracotta/5 shadow-sm hover:shadow-lg transition-all" data-item-category="kalender">
+                    <div class="relative overflow-hidden rounded-xl aspect-square mb-3">
+                        <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=400" alt="Grid Wall Calendar" class="w-full h-full object-cover cinematic-img">
+                    </div>
+                    <p class="text-[10px] uppercase font-extrabold text-dng-terracotta tracking-wider">Kalender</p>
+                    <h5 class="text-sm font-bold text-dng-charcoal mt-0.5">Minimal Desk Planner Board</h5>
+                </div>
+
+                <!-- Item 8 (Foto) -->
+                <div class="gallery-item cursor-pointer bg-dng-cream rounded-2xl p-3 border border-dng-terracotta/5 shadow-sm hover:shadow-lg transition-all" data-item-category="foto">
+                    <div class="relative overflow-hidden rounded-xl aspect-square mb-3">
+                        <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&q=80&w=400" alt="Nature Polaroid Strip" class="w-full h-full object-cover cinematic-img">
+                    </div>
+                    <p class="text-[10px] uppercase font-extrabold text-dng-terracotta tracking-wider">Cetak Foto</p>
+                    <h5 class="text-sm font-bold text-dng-charcoal mt-0.5">Aesthetic Instax Grid Collage</h5>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-dng-sage-light/30 border-t border-b border-dng-terracotta/5">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <span class="playwrite-accent text-dng-terracotta text-lg lowercase block">apa kata kawan-kawan kita?</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-dng-charcoal">Testimoni Kasual B2C</h2>
+                <div class="w-16 h-1 bg-dng-terracotta mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Testimonials Chats Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Chat 1 -->
+                <div class="bg-white p-6 rounded-soft border border-dng-terracotta/10 flex flex-col justify-between shadow-sm relative">
+                    <!-- Top Ribbon Decorator -->
+                    <span class="absolute top-4 right-4 text-dng-rose text-3xl font-serif">“</span>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100" alt="Nadine avatar" class="h-10 w-10 rounded-full object-cover border-2 border-dng-rose" onerror="this.onerror=null; this.src='https://placehold.co/100x100/FDFBF7/2C3E50?text=Customer'">
+                            <div>
+                                <h4 class="text-sm font-bold text-dng-charcoal">Nadine, 22</h4>
+                                <p class="text-[10px] text-dng-charcoal-light">Mahasiswa Unpad</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-dng-charcoal-light leading-relaxed italic">
+                            "Suka banget sama kado custom-nya! Kemarin bungkus buat ulang tahun sahabat pake tema Sage Green & wax seal rami, astaga estetik abis mirip banget Pinterest. Sangat direkomendasikan!"
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-dng-terracotta/5 flex items-center justify-between">
+                        <span class="text-[10px] text-dng-terracotta font-bold uppercase tracking-wider"><i class="fa-solid fa-gift mr-1"></i> Custom Wrapping</span>
+                        <div class="flex text-yellow-500 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat 2 -->
+                <div class="bg-white p-6 rounded-soft border border-dng-terracotta/10 flex flex-col justify-between shadow-sm relative">
+                    <span class="absolute top-4 right-4 text-dng-rose text-3xl font-serif">“</span>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=100" alt="Aris avatar" class="h-10 w-10 rounded-full object-cover border-2 border-dng-rose" onerror="this.onerror=null; this.src='https://placehold.co/100x100/FDFBF7/2C3E50?text=Customer'">
+                            <div>
+                                <h4 class="text-sm font-bold text-dng-charcoal">Aris, 24</h4>
+                                <p class="text-[10px] text-dng-charcoal-light">Content Creator</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-dng-charcoal-light leading-relaxed italic">
+                            "Cetak polaroid di sini murah tapi kualitasnya nggak kaleng-kaleng. Kertasnya tebal, warnanya moody cinematic dapet banget. Gak nyesel order banyak sekaligus buat hiasan kamar."
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-dng-terracotta/5 flex items-center justify-between">
+                        <span class="text-[10px] text-dng-terracotta font-bold uppercase tracking-wider"><i class="fa-solid fa-image mr-1"></i> Cetak Foto</span>
+                        <div class="flex text-yellow-500 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat 3 -->
+                <div class="bg-white p-6 rounded-soft border border-dng-terracotta/10 flex flex-col justify-between shadow-sm relative">
+                    <span class="absolute top-4 right-4 text-dng-rose text-3xl font-serif">“</span>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100" alt="Viona avatar" class="h-10 w-10 rounded-full object-cover border-2 border-dng-rose" onerror="this.onerror=null; this.src='https://placehold.co/100x100/FDFBF7/2C3E50?text=Customer'">
+                            <div>
+                                <h4 class="text-sm font-bold text-dng-charcoal">Viona, 27</h4>
+                                <p class="text-[10px] text-dng-charcoal-light">Pegawai Swasta</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-dng-charcoal-light leading-relaxed italic">
+                            "Pertama kali pesan Kalender Meja Kayu buat gift box kantor. Desain minimalisnya elegan parah. Tim CS DNGrafik ngebantu banget revisi layout sampe dapet yang pas. Juara sih layanannya."
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-dng-terracotta/5 flex items-center justify-between">
+                        <span class="text-[10px] text-dng-terracotta font-bold uppercase tracking-wider"><i class="fa-solid fa-calendar mr-1"></i> Kalender Kustom</span>
+                        <div class="flex text-yellow-500 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dng-charcoal text-dng-cream pt-16 pb-12 relative overflow-hidden">
+        <!-- Floating shapes background decor -->
+        <div class="absolute bottom-0 right-0 w-80 h-80 bg-dng-terracotta/10 rounded-full blur-3xl -z-10 translate-x-1/2 translate-y-1/2"></div>
+        <div class="absolute top-0 left-0 w-80 h-80 bg-dng-sage-dark/15 rounded-full blur-3xl -z-10 -translate-x-1/2 -translate-y-1/2"></div>
+
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-white/10 pb-12">
+            
+            <!-- Company profile summary -->
+            <div class="lg:col-span-5 space-y-4">
+                <a href="#" class="flex flex-col">
+                    <span class="playwrite-accent text-3xl font-bold tracking-tight text-dng-rose">DNGrafik</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] -mt-1 font-semibold text-dng-rose/70">Creative Print Partner</span>
+                </a>
+                <p class="text-sm text-white/70 max-w-sm leading-relaxed">
+                    Kami melayani pembuatan cetak foto personal, kalender meja kustom, dan pembungkusan hadiah bergaya estetik di bawah pengawasan langsung desainer ahli.
+                </p>
+                <div class="flex items-center space-x-4 pt-2">
+                    <a href="https://instagram.com" target="_blank" class="h-10 w-10 bg-white/5 hover:bg-dng-terracotta hover:text-white rounded-full flex items-center justify-center text-lg transition-colors duration-200">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/628123456789" target="_blank" class="h-10 w-10 bg-white/5 hover:bg-emerald-500 hover:text-white rounded-full flex items-center justify-center text-lg transition-colors duration-200">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Operational hours & contact -->
+            <div class="lg:col-span-4 space-y-4">
+                <h4 class="text-base font-bold text-white uppercase tracking-wider">Jam Operasional & Kontak</h4>
+                <ul class="text-sm text-white/70 space-y-2">
+                    <li><span class="font-bold text-dng-rose">Senin - Sabtu:</span> 09:00 - 18:00 WIB</li>
+                    <li><span class="font-bold text-dng-rose">Minggu / Libur:</span> Konsultasi Chat Saja</li>
+                    <li><span class="font-bold text-dng-rose">WhatsApp:</span> +62 812-3456-7890</li>
+                    <li><span class="font-bold text-dng-rose">Email:</span> halo@dngrafik.com</li>
+                </ul>
+            </div>
+
+            <!-- Direct Quick CTA -->
+            <div class="lg:col-span-3 space-y-4 flex flex-col justify-center">
+                <h4 class="text-base font-bold text-white uppercase tracking-wider">Mulai Bersama Kami</h4>
+                <p class="text-xs text-white/60">Punya kado impian yang bingung cara bungkusnya? Langsung konsul gratis!</p>
+                <a href="#kustomisasi" class="px-6 py-4 bg-dng-terracotta hover:bg-dng-terracotta-dark text-white text-center font-bold rounded-soft shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 min-h-[48px]">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span>Virtual Request Sekarang</span>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Copyright section -->
+        <div class="max-w-7xl mx-auto px-6 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-white/50 space-y-4 md:space-y-0">
+            <div>
+                &copy; 2026 DNGrafik. All Rights Reserved. Bisnis Milik: <span class="font-bold text-white/70">Muhamad Nuruzzaman</span>.
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="#" class="hover:text-white transition-colors">Syarat & Ketentuan</a>
+                <a href="#" class="hover:text-white transition-colors">Kebijakan Privasi</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WA CTA, hidden on load and visible after scroll -->
+    <a id="floating-wa" href="https://wa.me/628123456789?text=Halo%20DNGrafik!%20Saya%20tertarik%20bertanya%20seputar%20cetak%20dan%20kado%20custom." target="_blank" class="opacity-0 translate-y-10 pointer-events-none fixed bottom-6 right-6 z-40 bg-[#25D366] hover:bg-[#128C7E] text-white p-4 rounded-full shadow-2xl transition-all duration-300 flex items-center justify-center min-w-[56px] min-h-[56px] hover:scale-105">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span class="absolute right-14 bg-dng-charcoal text-white text-[11px] font-bold py-1.5 px-3 rounded-full shadow-md whitespace-nowrap hidden md:block opacity-0 group-hover:opacity-100 transition-opacity">Butuh Bantuan? Chat Kami</span>
+    </a>
+
+    <script>
+        // Custom Product Options details database
+        const productDetails = {
+            foto: {
+                title: 'Cetak Foto Estetik & Polaroid',
+                image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=350',
+                desc: 'Abadikan semua momen berhargamu dengan detail kustomisasi super lengkap:',
+                options: [
+                    '<strong>Pilihan Kertas:</strong> Premium Textured Matte (260gsm), Satin Pearl Soft, Glossy Cinematic.',
+                    '<strong>Ukuran Frame:</strong> Polaroid Mini, Polaroid Wide, Square 4x4, Photo Strip Instax 3-Frames.',
+                    '<strong>Aksesori Opsional:</strong> Wood stand holder minimalis, tali goni mini, atau jepitan kayu estetik.'
+                ]
+            },
+            kalender: {
+                title: 'Kalender Kustom Minimalis',
+                image: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&q=80&w=350',
+                desc: 'Kalender meja personal yang fungsional sekaligus hiasan meja estetik:',
+                options: [
+                    '<strong>Dudukan Kalender:</strong> Premium Pine Wood Block, Teak Wood Minimalist Stand, Acrylic Aesthetic Base.',
+                    '<strong>Format Layout:</strong> Bulanan Minimalis (12 lembar), Dua Bulanan (6 lembar), Desain Portrait atau Landscape.',
+                    '<strong>Fitur Kustom:</strong> Tambah foto pribadi untuk tiap halaman, tanda hari ulang tahun / tanggal jadian khusus.'
+                ]
+            },
+            kado: {
+                title: 'Bungkus Hadiah Kasual-Estetik',
+                image: 'https://images.unsplash.com/photo-1607344645866-009c320c5ab8?auto=format&fit=crop&q=80&w=350',
+                desc: 'Kemasan hadiah yang menambah nilai personal bagi penerima secara instan:',
+                options: [
+                    '<strong>Pilihan Kertas Pembungkus:</strong> Craft Vintage Paper (Cokelat), Soft Sage Green Pastel, Peach Dusty Rose.',
+                    '<strong>Aksen Tali:</strong> Rustic Twine Jute Rope (Tali Rami), White Soft Cotton Rope, Premium Maroon Silk Ribbon.',
+                    '<strong>Elemen Hiasan:</strong> Pressed Flower asli (Lavender, Baby Breath, Rose Petals), Wax Seal Stamp, Custom Tag handwritten.'
+                ]
+            }
+        };
+
+        // Initialize state & load defaults
+        window.onload = function() {
+            updateVirtualMockup();
+            
+            // Setup mobile navigation toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileDrawer = document.getElementById('mobile-drawer');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileDrawer.classList.toggle('hidden');
+            });
+
+            // Close drawer when clicking mobile links
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileDrawer.classList.add('hidden');
+                });
+            });
+
+            // Handle scroll logic for floating WhatsApp CTA
+            window.addEventListener('scroll', () => {
+                const floatingWa = document.getElementById('floating-wa');
+                if (window.scrollY > 450) {
+                    floatingWa.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
+                    floatingWa.classList.add('opacity-100', 'translate-y-0', 'pointer-events-all');
+                } else {
+                    floatingWa.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
+                    floatingWa.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-all');
+                }
+            });
+        };
+
+        // Open Product Detail Modal
+        function openProductDetail(key) {
+            const data = productDetails[key];
+            const modal = document.getElementById('product-detail-modal');
+            const content = document.getElementById('modal-content');
+            
+            let listHtml = '';
+            data.options.forEach(opt => {
+                listHtml += `<li class="flex items-start text-sm text-dng-charcoal-light leading-relaxed"><i class="fa-solid fa-sparkles text-dng-terracotta mr-3 mt-1 flex-shrink-0"></i> <span>${opt}</span></li>`;
+            });
+
+            content.innerHTML = `
+                <div class="space-y-4">
+                    <img src="${data.image}" alt="${data.title}" class="w-full h-44 object-cover rounded-xl shadow-inner cinematic-img" onerror="this.onerror=null; this.src='https://placehold.co/400x300/FDFBF7/2C3E50?text=Premium+Custom+Print'">
+                    <h4 class="text-2xl font-bold text-dng-charcoal">${data.title}</h4>
+                    <p class="text-sm text-dng-charcoal-light font-medium">${data.desc}</p>
+                    <ul class="space-y-3 pt-2">
+                        ${listHtml}
+                    </ul>
+                    <div class="pt-4 flex gap-4">
+                        <button onclick="closeProductDetail()" class="flex-1 py-3 border-2 border-dng-terracotta/20 text-dng-charcoal hover:border-dng-terracotta rounded-soft font-semibold text-xs transition-colors min-h-[44px]">Kembali</button>
+                        <a href="#kustomisasi" onclick="closeProductDetail(); selectProductField('${key}');" class="flex-1 py-3 bg-dng-charcoal hover:bg-dng-charcoal-light text-white text-center rounded-soft font-bold text-xs flex items-center justify-center min-h-[44px]">Custom Virtual Sekarang</a>
+                    </div>
+                </div>
+            `;
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        // Close Product Detail Modal
+        function closeProductDetail() {
+            const modal = document.getElementById('product-detail-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Pre-select drop-down in form based on action
+        function selectProductField(val) {
+            const selectEl = document.getElementById('requestProduct');
+            selectEl.value = val;
+            updateVirtualMockup();
+        }
+
+        // Handle Live Mockup Preview & Virtual Form logic
+        function updateVirtualMockup() {
+            const product = document.getElementById('requestProduct').value;
+            const previewBadge = document.getElementById('previewBadge');
+            
+            // Mockup views elements
+            const mockupGiftWrap = document.getElementById('mockupGiftWrap');
+            const mockupPolaroid = document.getElementById('mockupPolaroid');
+            const mockupCalendar = document.getElementById('mockupCalendar');
+            
+            // Dynamic form fields control
+            const wrapperThemeSelection = document.getElementById('wrapperThemeSelection');
+            const accessoriesSelection = document.getElementById('accessoriesSelection');
+            const noteLabel = document.getElementById('noteLabel');
+            const requestNotes = document.getElementById('requestNotes');
+
+            // Toggle visibility of preview items based on product selected
+            if (product === 'kado') {
+                previewBadge.innerText = 'Bungkus Kado';
+                mockupGiftWrap.classList.remove('hidden');
+                mockupPolaroid.classList.add('hidden');
+                mockupCalendar.classList.add('hidden');
+                
+                wrapperThemeSelection.classList.remove('hidden');
+                accessoriesSelection.classList.remove('hidden');
+                noteLabel.innerText = 'Ceritakan Bungkus Kado Impianmu (Tema, Request Kartu, Dll)';
+                requestNotes.placeholder = "Contoh: Kado ini untuk ulang tahun pacarku, tolong beri nuansa vintage cokelat rami dan selipkan kartu ucapan 'Happy Birthday Sayang!'...";
+
+                // Get interactive value choices
+                const colorTheme = document.querySelector('input[name="colorTheme"]:checked').value;
+                const accessories = Array.from(document.querySelectorAll('input[name="acc"]:checked')).map(cb => cb.value);
+
+                // Apply colors in live mockup wrap element
+                if (colorTheme.includes('Sage')) {
+                    mockupGiftWrap.style.backgroundColor = '#E8EFE9'; // Sage Light
+                } else if (colorTheme.includes('Rose')) {
+                    mockupGiftWrap.style.backgroundColor = '#E2B4B0'; // Rose
+                } else {
+                    mockupGiftWrap.style.backgroundColor = '#EEDBC5'; // Kraft Paper Brown
+                }
+
+                // Ribbon & Cotton Thread visibility control
+                const horizontalRibbon = document.getElementById('mockupRibbonHorizontal');
+                const verticalRibbon = document.getElementById('mockupRibbonVertical');
+                
+                if (accessories.includes('Tali Rami Rustic')) {
+                    horizontalRibbon.classList.remove('hidden');
+                    verticalRibbon.classList.remove('hidden');
+                    horizontalRibbon.style.backgroundColor = 'rgba(120, 90, 60, 0.4)'; // rami style
+                    verticalRibbon.style.backgroundColor = 'rgba(120, 90, 60, 0.4)';
+                } else {
+                    horizontalRibbon.classList.add('hidden');
+                    verticalRibbon.classList.add('hidden');
+                }
+
+                // Wax Seal Stamp control
+                const waxSeal = document.getElementById('mockupWax');
+                if (accessories.includes('Vintage Wax Seal Stamp')) {
+                    waxSeal.classList.remove('hidden');
+                } else {
+                    waxSeal.classList.add('hidden');
+                }
+
+                // Pressed Flower control
+                const flower = document.getElementById('mockupFlower');
+                if (accessories.includes('Bunga Kering Asli (Pressed Lavender)')) {
+                    flower.classList.remove('hidden');
+                    flower.style.opacity = '1';
+                } else {
+                    flower.classList.add('hidden');
+                }
+
+                // Card handwritten tag control
+                const tag = document.getElementById('mockupTag');
+                if (accessories.includes('Handwritten Gift Card')) {
+                    tag.classList.remove('hidden');
+                    tag.innerText = requestNotes.value ? requestNotes.value.substring(0, 15) + "..." : "To: My Friend";
+                } else {
+                    tag.classList.add('hidden');
+                }
+
+                // Populate Summary display details
+                let summaryHtml = `
+                    <p class="text-[11px]"><strong class="text-dng-terracotta">Warna Tema:</strong> ${colorTheme}</p>
+                    <p class="text-[11px]"><strong class="text-dng-terracotta">Aksen Pilihan:</strong> ${accessories.length > 0 ? accessories.join(', ') : 'Tanpa aksen'}</p>
+                    <p class="text-[11px] italic text-neutral-500">"${requestNotes.value || 'Belum ada catatan kustom...'}"</p>
+                `;
+                document.getElementById('virtualSummaryList').innerHTML = summaryHtml;
+
+            } else if (product === 'foto') {
+                previewBadge.innerText = 'Cetak Foto';
+                mockupGiftWrap.classList.add('hidden');
+                mockupPolaroid.classList.remove('hidden');
+                mockupCalendar.classList.add('hidden');
+                
+                wrapperThemeSelection.classList.add('hidden');
+                accessoriesSelection.classList.add('hidden');
+                noteLabel.innerText = 'Catatan Kustom Cetak Foto (Pilihan Kertas / Ukuran / Tulisan Polaroid)';
+                requestNotes.placeholder = "Contoh: Cetak Polaroid ukuran mini, kertas bertekstur Matte, tambahkan tulisan cetak 'Me & You 2026' di bawah foto ya...";
+
+                // Polaroid caption updates
+                const polaroidCaption = document.getElementById('mockupPolaroidCaption');
+                polaroidCaption.innerText = requestNotes.value ? requestNotes.value.substring(0, 20) : "Sweet Memories";
+
+                let summaryHtml = `
+                    <p class="text-[11px]"><strong class="text-dng-terracotta">Format Produk:</strong> Polaroid Estetik</p>
+                    <p class="text-[11px]"><strong class="text-dng-terracotta">Kertas Dasar:</strong> Premium Textured Matte</p>
+                    <p class="text-[11px] italic text-neutral-500">"${requestNotes.value || 'Belum ada catatan kustom...'}"</p>
+                `;
+                document.getElementById('virtualSummaryList').innerHTML = summaryHtml;
+
+            } else if (product === 'kalender') {
+                previewBadge.innerText = 'Kalender';
+                mockupGiftWrap.classList.add('hidden');
+                mockupPolaroid.classList.add('hidden');
+                mockupCalendar.classList.remove('hidden');
+                
+                wrapperThemeSelection.classList.add('hidden');
+                accessoriesSelection.classList.add('hidden');
+                noteLabel.innerText = 'Pilih Kustom Kalender (Tema Foto, Desain Dudukan Kayu, Tanggal Spesial)';
+                requestNotes.placeholder = "Contoh: Kalender Meja Dudukan Kayu Pine Wood, isi kalender 12 lembar dihiasi foto liburan saya, tandai tanggal 14 Agustus pakai ikon hati merah...";
+
+                let summaryHtml = `
+                    <p class="text-[11px]"><strong class="text-dng-terracotta">Tipe Kalender:</strong> Desk Calendar Wood Block</p>
+                    <p class="text-[11px]"><strong class="text-dng-terracotta">Isi Lembar:</strong> 12 Bulan Full Kustom</p>
+                    <p class="text-[11px] italic text-neutral-500">"${requestNotes.value || 'Belum ada catatan kustom...'}"</p>
+                `;
+                document.getElementById('virtualSummaryList').innerHTML = summaryHtml;
+            }
+        }
+
+        // WhatsApp direct link action generator
+        function sendToWhatsApp() {
+            const product = document.getElementById('requestProduct').value;
+            const requestNotes = document.getElementById('requestNotes').value;
+            
+            let productName = '';
+            let detailedDetails = '';
+
+            if (product === 'kado') {
+                productName = 'Bungkus Hadiah Kasual-Estetik';
+                const colorTheme = document.querySelector('input[name="colorTheme"]:checked').value;
+                const accessories = Array.from(document.querySelectorAll('input[name="acc"]:checked')).map(cb => cb.value);
+                detailedDetails = `\n- Warna Tema Kertas: ${colorTheme}\n- Aksesoris Tambahan: ${accessories.length > 0 ? accessories.join(', ') : 'Tanpa aksen'}`;
+            } else if (product === 'foto') {
+                productName = 'Cetak Foto Estetik & Polaroid';
+            } else {
+                productName = 'Kalender Kustom Minimalis';
+            }
+
+            const formatMessage = `Halo DNGrafik! Saya tertarik memesan produk custom berikut dari landing page:
+
+*Produk Utama*: ${productName}${detailedDetails}
+*Catatan Request*: ${requestNotes || 'Saya ingin konsultasi desain langsung via WA'}
+
+Apakah pesanan ini bisa dibantu proses desain & pembayarannya? Terima kasih!`;
+
+            // Open WhatsApp direct link
+            const waNumber = '628123456789'; // Your designated WhatsApp number
+            const encodedMessage = encodeURIComponent(formatMessage);
+            const waURL = `https://wa.me/${waNumber}?text=${encodedMessage}`;
+            
+            // Safe redirect trigger
+            window.open(waURL, '_blank');
+        }
+
+        // Filter Portfolio Gallery Category Grid
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.gallery-filter-btn');
+
+            // Toggle filter button styling active state
+            buttons.forEach(btn => {
+                const btnCategory = btn.getAttribute('data-category');
+                if (btnCategory === category) {
+                    btn.classList.remove('bg-dng-cream', 'text-dng-charcoal', 'hover:bg-dng-rose/30');
+                    btn.classList.add('bg-dng-charcoal', 'text-white', 'shadow-md');
+                } else {
+                    btn.classList.add('bg-dng-cream', 'text-dng-charcoal', 'hover:bg-dng-rose/30');
+                    btn.classList.remove('bg-dng-charcoal', 'text-white', 'shadow-md');
+                }
+            });
+
+            // Smooth opacity transition for filtering
+            items.forEach(item => {
+                const itemCategory = item.getAttribute('data-item-category');
+                if (category === 'semua' || itemCategory === category) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    }, 50);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 200);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
+```
